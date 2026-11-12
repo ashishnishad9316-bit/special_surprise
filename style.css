@@ -1,76 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+*{box-sizing:border-box} 
+:root{--saffron:#f6a33b;--deep:#672b1b;--cream:#fff4dc;--gold:#ffd77a}
+body{margin:0;min-height:100vh;font-family:Georgia,"Noto Sans Devanagari",sans-serif;color:#fff8e9;background:linear-gradient(160deg,#451b20 0%,#8b3f18 48%,#d8792d 100%);overflow-x:hidden}
+.glow{position:fixed;border-radius:50%;filter:blur(2px);pointer-events:none}.glow-one{width:280px;height:280px;background:#ffbd4a33;top:-90px;right:-70px}.glow-two{width:220px;height:220px;background:#ffdf8b22;bottom:2%;left:-90px}
+.page{width:min(760px,92%);margin:0 auto;padding:26px 0 30px;position:relative}
+.top{display:flex;justify-content:center;align-items:center;gap:14px;color:#ffe6a7;letter-spacing:2px;font-weight:bold}.top p{margin:0;font-size:14px}.sun-icon{font-size:23px}
+.hero{text-align:center;padding:26px 18px 22px;background:#ffffff0d;border:1px solid #ffe3a34a;border-radius:28px;box-shadow:0 20px 60px #2a100c55;backdrop-filter:blur(5px)}
+.eyebrow{font-size:12px;letter-spacing:3px;color:#ffdb91;margin:8px 0 18px}
+h1{font-size:clamp(34px,8vw,57px);line-height:1.28;margin:0;color:#fff8e9;text-shadow:0 4px 18px #3b130c88}
+h1 em{font-style:normal;color:#ffd477}
+.intro{max-width:520px;margin:16px auto 22px;line-height:1.9;font-size:16px;color:#fff0d6}
+.sunset{height:190px;max-width:540px;margin:0 auto 22px;position:relative;overflow:hidden;border-radius:18px;background:linear-gradient(#f7a44b,#f7c36d 48%,#8f4b35 49%,#5b3440 100%);box-shadow:inset 0 0 35px #632c2b66}
+.sun{position:absolute;width:86px;height:86px;border-radius:50%;background:#ffe5a0;left:calc(50% - 43px);top:25px;box-shadow:0 0 45px #fff0a6}
+.horizon{position:absolute;left:0;right:0;top:112px;height:2px;background:#ffe5ae88}
+.water{position:absolute;left:0;right:0;height:35px;background:repeating-linear-gradient(0deg,transparent 0 8px,#ffdc9b88 9px 10px);opacity:.8}
+.water-a{top:120px}.water-b{top:158px;opacity:.5}
+.ghat{position:absolute;bottom:7px;width:100%;font-size:21px;letter-spacing:4px;text-shadow:0 2px 5px #4b241d}
+button{border:0;border-radius:999px;padding:14px 24px;font-size:15px;font-weight:bold;cursor:pointer;color:#652b19;background:linear-gradient(135deg,#ffe6a3,#ffbd56);box-shadow:0 7px 20px #34130c55;transition:transform .2s}
+button:active{transform:scale(.97)}
+.wish-card{max-width:540px;margin:22px auto 0;padding:22px 20px;border-radius:20px;background:#fff6e7;color:#65311f;box-shadow:0 12px 30px #36150e55;animation:pop .45s ease}
+.wish-card h2{margin:8px 0;color:#a44720;font-size:27px}.wish-card p{line-height:1.9;margin:10px 0}.wish-card strong{display:block;line-height:1.8;color:#8a3b1c}.kalash{font-size:27px}
+.blessings{margin:22px 0 14px;padding:23px 22px;text-align:center;border:1px solid #ffe3a344;border-radius:22px;background:#3d1b1b33}
+.mini{font-size:27px}.blessings h2{color:#ffdf9b;margin:8px 0}.blessings p{line-height:1.9;margin:0 auto;max-width:570px;color:#ffefd9}
+footer{text-align:center;color:#ffe2a1;font-size:13px;padding:15px 5px}
+.music{position:fixed;right:16px;bottom:16px;padding:11px 16px;font-size:13px;z-index:3}
+@keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:480px){.page{width:94%;padding-top:18px}.hero{padding:22px 13px;border-radius:22px}.intro{font-size:14px}.sunset{height:165px}.music{right:10px;bottom:10px}.blessings{padding:19px 15px}}
 
-:root {
-  --pink: #e85d91;
-  --deep: #9e3d68;
-  --soft: #fff0f5;
-  --ink: #59394a;
-}
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 22px 14px;
-  color: var(--ink);
-  font-family: "DM Sans", Arial, sans-serif;
-  background:
-    radial-gradient(circle at 12% 15%, #ffe0eb 0 9%, transparent 10%),
-    radial-gradient(circle at 88% 82%, #fbd9e7 0 11%, transparent 12%),
-    linear-gradient(145deg, #fff8fb, #ffe8f1);
-  overflow-x: hidden;
-}
-.card {
-  width: min(100%, 520px);
-  padding: 30px 23px 22px;
-  text-align: center;
-  border: 1px solid rgba(232, 93, 145, .18);
-  border-radius: 28px;
-  background: rgba(255,255,255,.88);
-  box-shadow: 0 18px 55px rgba(166, 77, 113, .14);
-  position: relative;
-  z-index: 1;
-}
-.top-label { color: var(--pink); font-size: 11px; letter-spacing: 3px; font-weight: 700; }
-.hero-icon { font-size: 47px; margin: 15px 0 4px; animation: bob 2.8s ease-in-out infinite; }
-.eyebrow { color: #b56a88; font-size: 13px; letter-spacing: .5px; margin: 10px 0; }
-h1, h2 { font-family: "Playfair Display", Georgia, serif; color: var(--deep); }
-h1 { font-size: clamp(34px, 9vw, 47px); margin: 5px 0 10px; }
-h1 span { font-family: sans-serif; font-size: .7em; }
-.intro { font-size: 15px; line-height: 1.7; margin: 0 auto 23px; max-width: 330px; }
-button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
-.main-btn, .music-btn {
-  border: 0; border-radius: 999px; padding: 14px 23px; font-weight: 700;
-  color: white; background: linear-gradient(100deg, #e85d91, #f28bb0);
-  box-shadow: 0 8px 20px rgba(232,93,145,.25);
-  transition: transform .2s, box-shadow .2s;
-}
-.main-btn:active, .music-btn:active { transform: scale(.97); }
-.main-btn span { margin-left: 7px; }
-.surprise { margin-top: 28px; padding-top: 20px; border-top: 1px dashed #f1bfd1; animation: appear .7s ease both; }
-.hidden { display: none; }
-.cake-wrap { margin: 0 auto 5px; position: relative; width: fit-content; }
-.cake { font-size: 70px; filter: drop-shadow(0 8px 8px rgba(180,80,120,.12)); }
-.candle { position: absolute; top: -11px; left: 50%; transform: translateX(-50%); font-size: 25px; }
-h2 { font-size: clamp(25px, 7vw, 34px); line-height: 1.25; margin: 8px 0 14px; }
-h2 span { color: #e85d91; }
-.wish { font-size: 14px; line-height: 1.85; max-width: 390px; margin: 0 auto; }
-.divider { color: #e58bad; letter-spacing: 7px; margin: 19px 0 12px; font-size: 12px; }
-.little-note { color: var(--deep); font-family: "Playfair Display", Georgia, serif; font-size: 17px; }
-.music-btn { margin-top: 8px; padding: 11px 18px; font-size: 13px; }
-.music-btn.playing { background: linear-gradient(100deg, #9e6ac5, #d18bb7); }
-.tiny { color: #a77c8f; font-size: 11px; margin: 9px 0 0; }
-footer { margin-top: 25px; color: #bd8ca1; font-size: 11px; }
-.sparkles::before, .sparkles::after {
-  content: "♡   ✦   ♡   ✧   ♡"; position: fixed; color: rgba(232,93,145,.25);
-  font-size: 24px; letter-spacing: 18px; white-space: nowrap; pointer-events: none;
-}
-.sparkles::before { top: 8%; left: -20px; transform: rotate(-12deg); }
-.sparkles::after { bottom: 8%; right: -30px; transform: rotate(12deg); }
-@keyframes bob { 0%,100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-8px) rotate(4deg); } }
-@keyframes appear { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-@media (max-width: 380px) {
-  .card { padding: 25px 17px 19px; border-radius: 23px; }
-  .wish { font-size: 13px; }
-}
+.credit{display:inline-block;margin-top:10px;color:#ffe6b8;font-size:12px;letter-spacing:1px;opacity:.9}

@@ -1,44 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff0f5">
-  <title>A Little Birthday Surprise</title>
+  <meta name="theme-color" content="#8b3f18">
+  <title>छठ पूजा की हार्दिक शुभकामनाएँ</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="sparkles" aria-hidden="true"></div>
-  <main class="card">
-    <div class="top-label">A LITTLE SURPRISE FOR YOU ✨</div>
-    <div class="hero-icon" aria-hidden="true">🎀</div>
-    <p class="eyebrow">Someone made this just for you</p>
-    <h1>Hey, Ayushi! <span>💗</span></h1>
-    <p class="intro">There’s a little birthday surprise waiting for you.</p>
+  <div class="glow glow-one"></div><div class="glow glow-two"></div>
+  <main class="page">
+    <header class="top">
+      <span class="sun-icon">☀️</span>
+      <p>जय छठी मैया</p>
+      <span class="sun-icon">🪔</span>
+    </header>
 
-    <button id="openBtn" class="main-btn" type="button">Open Your Surprise <span>🎁</span></button>
-
-    <section id="surprise" class="surprise hidden" aria-live="polite">
-      <div class="cake-wrap">
-        <div class="candle">🕯️</div>
-        <div class="cake">🎂</div>
+    <section class="hero">
+      <div class="eyebrow">पावन पर्व • आस्था • विश्वास</div>
+      <h1>छठ पूजा की<br><em>हार्दिक शुभकामनाएँ</em></h1>
+      <p class="intro">सूर्य देव और छठी मैया की कृपा से आपके जीवन में सुख, शांति, समृद्धि और खुशहाली बनी रहे।</p>
+      <div class="sunset" aria-label="सूर्यास्त और नदी का दृश्य">
+        <div class="sun"></div>
+        <div class="horizon"></div>
+        <div class="water water-a"></div><div class="water water-b"></div>
+        <div class="ghat">🪔　🌾　🪷　🌾　🪔</div>
       </div>
-      <p class="eyebrow">Today is all about you</p>
-      <h2>Happy Birthday,<br><span>Ayushi Singh Chauhan!</span> 🥳</h2>
-      <p class="wish">
-        May your day be filled with laughter, lovely surprises, and moments
-        worth remembering. Keep shining, keep smiling, and may the year ahead
-        bring you lots of happiness. 💕
-      </p>
-      <div class="divider">✦ ✦ ✦</div>
-      <p class="little-note">Sending you the warmest birthday wishes! 🌷</p>
-      <button id="musicBtn" class="music-btn" type="button" aria-pressed="false">
-        <span id="musicIcon">♫</span> Play birthday tune
-      </button>
-      <p class="tiny">A little tune made especially for this surprise 🎶</p>
+      <button id="wishBtn">🌼 शुभकामनाएँ पढ़ें</button>
+      <div id="wishCard" class="wish-card" hidden>
+        <div class="kalash">🌾 🪔 🌺</div>
+        <h2>जय छठी मैया!</h2>
+        <p>छठी मैया आपके परिवार को उत्तम स्वास्थ्य, सुख-समृद्धि और अपार खुशियाँ प्रदान करें। आपकी हर अच्छी मनोकामना पूर्ण हो और घर-आँगन प्रेम व उजाले से भरा रहे।</p>
+        <strong>आप सभी को छठ महापर्व की मंगलमय शुभकामनाएँ! 🙏</strong>
+      </div>
     </section>
-    <footer>Made with a little extra care 💌</footer>
+
+    <section class="blessings">
+      <div class="mini">🙏</div>
+      <h2>आस्था का महापर्व</h2>
+      <p>डूबते सूर्य को अर्घ्य और उगते सूर्य को प्रणाम — छठ पूजा हमें प्रकृति, कृतज्ञता और परिवार के प्रेम का संदेश देती है।</p>
+    </section>
+    <footer>🌞 छठी मैया सब पर अपनी कृपा बनाए रखें 🌞<br><span class="credit">Created with ❤️ by Ashish Nishad</span></footer>
   </main>
+  <audio id="chhathAudio" loop preload="none" src="chhath-instrumental.mp3"></audio>
+  <button class="music" id="musicBtn" aria-label="संगीत चालू या बंद करें">♫ संगीत चालू करें</button>
   <script src="script.js"></script>
 </body>
 </html>
